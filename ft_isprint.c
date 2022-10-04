@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isdigit.c                                       :+:    :+:            */
+/*   ft_isprint.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/03 15:59:47 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/04 12:30:37 by rhorbach      ########   odam.nl         */
+/*   Created: 2022/10/04 12:31:24 by rhorbach      #+#    #+#                 */
+/*   Updated: 2022/10/04 12:41:35 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 #include <ctype.h>
 */
 
-int	ft_isdigit(int arg)
+int	ft_isprint(int arg)
 {
-	if ((arg >= '0' && arg <= '9'))
+	if (arg >= 32 && arg <= 126)
 		return (1);
 	else
 		return (0);
@@ -26,9 +26,9 @@ int	ft_isdigit(int arg)
 /*
 int main()
 {
-	char  c = '&';
-	char  b = '&';
-	printf ("%i\n", ft_isdigit(c));
-	printf ("%i", isdigit(b));
+	char  c = '$';
+	char  b = '$';
+	printf ("%i\n", ft_isprint(c));
+	printf ("%i", isprint(b));
 }
 */
