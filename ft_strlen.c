@@ -1,11 +1,11 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isascii.c                                       :+:    :+:            */
+/*   ft_strlen.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/03 17:27:39 by rhorbach      #+#    #+#                 */
+/*   Created: 2022/10/04 12:42:38 by rhorbach      #+#    #+#                 */
 /*   Updated: 2022/10/04 17:01:30 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
@@ -13,22 +13,25 @@
 /*
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 */
 
-int	ft_isascii(int arg)
+unsigned long	ft_strlen(char *ptr)
 {
-	if ((arg >= 0 && arg <= 127))
-		return (1);
-	else
-		return (0);
+	unsigned long	counter;
+
+	counter = 0;
+	while (ptr[counter] != '\0')
+		counter++;
+	return (counter);
 }
 
 /*
 int main()
 {
-	unsigned char c = 128;
-	unsigned char  b = 128;
-	printf ("%i\n", ft_isascii(c));
-	printf ("%i", isascii(b));
+	char	a[] = "test";
+
+	printf ("%lu\n", ft_strlen(a));
+	printf ("%lu", strlen(a));
 }
 */
