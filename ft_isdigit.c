@@ -6,24 +6,21 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/03 15:59:47 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/04 12:30:37 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/05 15:26:51 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+
+int	ft_isdigit(int arg)
+{
+	return (arg >= '0' && arg <= '9');
+}
 
 /*
 #include <stdio.h>
 #include <ctype.h>
-*/
 
-int	ft_isdigit(int arg)
-{
-	if ((arg >= '0' && arg <= '9'))
-		return (1);
-	else
-		return (0);
-}
-
-/*
 int main()
 {
 	char  c = '&';

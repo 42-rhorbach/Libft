@@ -6,13 +6,12 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/04 13:34:08 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/04 17:01:30 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/05 15:36:46 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-// #include <ctype.h>
-// #include <string.h>
+
 
 void	*ft_memset(void *ptr, int c, size_t n)
 {
@@ -28,17 +27,18 @@ void	*ft_memset(void *ptr, int c, size_t n)
 		str[counter] = c;
 		counter++;
 	}
-	str[counter + 1] = '\0';
-	return (str); //lmao what returned een string maar void?
+	return (str);
 }
 
-/*
-int	main()
-{
-	char	str1[50];
-	char	str2[50];
+// #include <stdio.h>
+// #include <ctype.h>
+// #include <string.h>
 
-	printf ("%s\n", ft_memset(str1, '$', 60));
-	printf ("%s", memset(str2, '$', 60));
-}
-*/
+// int	main()
+// {
+// 	char	str1[50];
+// 	//char	str2[50];
+
+// 	printf ("%s\n", ft_memset(str1, '$', 60));
+// 	//printf ("%s", memset(str2, '$', 50));
+// }

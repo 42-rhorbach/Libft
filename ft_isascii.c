@@ -6,24 +6,21 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/03 17:27:39 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/04 17:01:30 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/05 15:36:19 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+
+int	ft_isascii(int arg)
+{
+	return (arg >= 0 && arg <= 127);
+}
 
 /*
 #include <stdio.h>
 #include <ctype.h>
-*/
 
-int	ft_isascii(int arg)
-{
-	if ((arg >= 0 && arg <= 127))
-		return (1);
-	else
-		return (0);
-}
-
-/*
 int main()
 {
 	unsigned char c = 128;

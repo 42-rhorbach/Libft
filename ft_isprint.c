@@ -6,24 +6,21 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/04 12:31:24 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/04 12:41:35 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/05 15:36:23 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+
+int	ft_isprint(int arg)
+{
+	return (arg >= 32 && arg <= 126);
+}
 
 /*
 #include <stdio.h>
 #include <ctype.h>
-*/
 
-int	ft_isprint(int arg)
-{
-	if (arg >= 32 && arg <= 126)
-		return (1);
-	else
-		return (0);
-}
-
-/*
 int main()
 {
 	char  c = '$';

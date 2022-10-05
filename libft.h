@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isalpha.c                                       :+:    :+:            */
+/*   libft.h                                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/03 14:57:07 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/05 15:36:12 by rhorbach      ########   odam.nl         */
+/*   Created: 2022/10/05 14:46:58 by rhorbach      #+#    #+#                 */
+/*   Updated: 2022/10/05 16:33:10 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int arg)
-{
-	return ((arg >= 'A' && arg <= 'Z') || (arg >= 'a' && arg <= 'z'));
-}
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <stdlib.h>
+void	*ft_memset(void *ptr, int c, size_t n);
+int	ft_isalpha(int arg);
+int	ft_isdigit(int arg);
 
-/*
-#include <stdio.h>
-#include <ctype.h>
-
-int main()
-{
-	char  c = ']';
-	char  b = ']';
-	printf ("%i\n", ft_isalpha(c));
-	printf ("%i", isalpha(b));
-}
-*/
+#endif

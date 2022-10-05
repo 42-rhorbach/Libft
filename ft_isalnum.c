@@ -6,30 +6,24 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/03 16:34:33 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/03 17:23:33 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/05 15:20:09 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-#include <stdio.h>
-#include <ctype.h>
-*/
+#include "libft.h"
 
 int	ft_isalnum(int arg)
 {
-	if ((arg >= 'A' && arg <= 'Z') || (arg >= 'a' && arg <= 'z')
-		|| (arg >= '0' && arg <= '9'))
-		return (1);
-	else
-		return (0);
+	return (ft_isalpha(arg) || ft_isdigit(arg));
 }
 
-/*
-int main()
-{
-	char  c = '*';
-	char  b = '*';
-	printf ("%i\n", ft_isalnum(c));
-	printf ("%i", isalnum(b));
-}
-*/
+// #include <stdio.h>
+// #include <ctype.h>
+
+// int main()
+// {
+// 	char  c = '*';
+// 	char  b = '*';
+// 	printf ("%i\n", ft_isalnum(c));
+// 	printf ("%i", isalnum(b));
+// }
