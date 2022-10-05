@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/04 16:27:06 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/05 16:47:32 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/05 16:53:48 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(void)
 	counter2 = 0;
 
 	ft_memset(str1, 'h', 20);
-	ft_memset(str2, 'h', 20);                                                      a
+	ft_memset(str2, 'h', 20);
 
 	ft_bzero(str1, 10);
 	bzero (str2, 10);
