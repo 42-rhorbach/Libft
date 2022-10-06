@@ -6,11 +6,9 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/04 12:31:24 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/05 15:36:23 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/06 17:03:42 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 int	ft_isprint(int arg)
 {

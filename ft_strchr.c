@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memset.c                                        :+:    :+:            */
+/*   ft_strchr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/04 13:34:08 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/06 17:11:38 by rhorbach      ########   odam.nl         */
+/*   Created: 2022/10/06 13:57:32 by rhorbach      #+#    #+#                 */
+/*   Updated: 2022/10/06 17:03:56 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-void	*ft_memset(void *ptr, int c, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned long	counter;
-	unsigned char	b;
-	unsigned char	*str;
+	char	a;
+	int		i;
 
-	b = c;
-	str = ptr;
-	counter = 0;
-	while (counter != n)
+	a = c;
+	i = 0;
+	while (s[i] != '\0')
 	{
-		str[counter] = c;
-		counter++;
+		if (s[i] == a)
+			return ((char *)&s[i]);
+		i++;
 	}
-	return (str);
+	if (a == '\0')
+		return ((char *)&s[i]);
+	return (0);
 }
 
-// #include <stdio.h>
-// #include <ctype.h>
 // #include <string.h>
+// #include <stdio.h>
 
 // int	main()
 // {
-// 	char	str1[50];
-// 	char	str2[50];
+// 	char	c = 'n';
+// 	char	str[] = "muninn";
+// 	char	c1 = 'n';
+// 	char	str1[] = "muninn";
 
-// 	printf ("%s\n", ft_memset(str1, '$', 60));
-//  printf ("%s", memset(str2, '$', 50));
+// 	printf("%s\n", ft_strchr(str, c));
+// 	printf("%s\n", strchr(str1, c1));
 // }

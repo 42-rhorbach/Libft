@@ -1,43 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memset.c                                        :+:    :+:            */
+/*   ft_memcpy.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/04 13:34:08 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/06 17:11:38 by rhorbach      ########   odam.nl         */
+/*   Created: 2022/10/05 16:57:25 by rhorbach      #+#    #+#                 */
+/*   Updated: 2022/10/06 15:15:45 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_memset(void *ptr, int c, size_t n)
+void	*ft_memcpy(void *pdst, const void *psrc, size_t n)
 {
-	unsigned long	counter;
-	unsigned char	b;
-	unsigned char	*str;
+	size_t		index;
+	char		*dst;
+	const char	*src;
 
-	b = c;
-	str = ptr;
-	counter = 0;
-	while (counter != n)
+	index = 0;
+	dst = pdst;
+	src = psrc;
+	while (index != n)
 	{
-		str[counter] = c;
-		counter++;
+		dst[index] = src[index];
+		index++;
 	}
-	return (str);
+	return (dst);
 }
 
-// #include <stdio.h>
-// #include <ctype.h>
 // #include <string.h>
+// #include <stdio.h>
 
 // int	main()
 // {
-// 	char	str1[50];
-// 	char	str2[50];
+// 	char dst[] = "newguy";
+// 	char src[] = "oldman";
+// 	char dst1[] = "newguy";
+// 	char src1[] = "oldman";
 
-// 	printf ("%s\n", ft_memset(str1, '$', 60));
-//  printf ("%s", memset(str2, '$', 50));
+// 	memcpy(dst, src, 4);
+// 	printf("%s\n", dst);
+// 	printf("%s\n", ft_memcpy(dst1, src1, 4));
 // }

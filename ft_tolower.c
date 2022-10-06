@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isdigit.c                                       :+:    :+:            */
+/*   ft_tolower.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/03 15:59:47 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/06 17:03:30 by rhorbach      ########   odam.nl         */
+/*   Created: 2022/10/06 11:12:27 by rhorbach      #+#    #+#                 */
+/*   Updated: 2022/10/06 13:56:55 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int arg)
+int	ft_tolower(int c)
 {
-	return (arg >= '0' && arg <= '9');
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
 
-/*
-#include <stdio.h>
-#include <ctype.h>
+// #include <ctype.h>
+// #include <stdio.h>
 
-int main()
-{
-	char  c = '&';
-	char  b = '&';
-	printf ("%i\n", ft_isdigit(c));
-	printf ("%i", isdigit(b));
-}
-*/
+// int	main()
+// {
+// 	char c = 'H';
+// 	char g = 'H';
+
+// 	printf("%i\n", ft_tolower(c));
+// 	printf("%i\n", tolower(g));
+// }

@@ -6,11 +6,9 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/03 17:27:39 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/05 15:36:19 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/06 17:03:05 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 int	ft_isascii(int arg)
 {
