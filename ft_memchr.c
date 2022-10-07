@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcpy.c                                        :+:    :+:            */
+/*   ft_memchr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/05 16:57:25 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/07 15:38:26 by rhorbach      ########   odam.nl         */
+/*   Created: 2022/10/06 17:18:50 by rhorbach      #+#    #+#                 */
+/*   Updated: 2022/10/07 15:30:00 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_memcpy(void *pdst, const void *psrc, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t		index;
-	char		*dst;
-	const char	*src;
+	char			a;
+	size_t			i;
+	const char		*str;
 
-	index = 0;
-	dst = pdst;
-	src = psrc;
-	while (index != n)
+	str = s;
+	a = c;
+	i = 0;
+	while (i != n)
 	{
-		dst[index] = src[index];
-		index++;
+		if (str[i] == a)
+			return ((void *)&str[i]);
+		i++;
 	}
-	return (dst);
+	return (0);
 }
 
 // #include <string.h>
@@ -34,12 +35,15 @@ void	*ft_memcpy(void *pdst, const void *psrc, size_t n)
 
 // int	main()
 // {
-// 	char dst[] = "newguy";
-// 	char src[] = "oldman";
-// 	char dst1[] = "newguy";
-// 	char src1[] = "oldman";
+// 	char *str;
+// 	str = malloc(5 * sizeof(char));
+// 	str[0] = 't';
+// 	str[1] = 'e';
+// 	str[2] = 's';
+// 	str[3] = 't';
+// 	str[4] = '\0';
 
-// 	memcpy(dst, src, 4);
-// 	printf("%s\n", dst);
-// 	printf("%s\n", ft_memcpy(dst1, src1, 4));
+
+// 	printf("%s\n", ft_memchr(str, 'e', 0));
+// 	printf("%s\n", memchr(str, 'e', 0));
 // }
