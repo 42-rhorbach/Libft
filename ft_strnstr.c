@@ -1,45 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strchr.c                                        :+:    :+:            */
+/*   ft_strnstr.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/06 13:57:32 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/10 14:57:31 by rhorbach      ########   odam.nl         */
+/*   Created: 2022/10/10 13:05:58 by rhorbach      #+#    #+#                 */
+/*   Updated: 2022/10/10 16:41:37 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	char	a;
-	int		i;
+	size_t	i;
+	size_t	j;
+	size_t	l;
 
-	a = c;
 	i = 0;
-	while (s[i] != '\0')
+	j = 0;
+	l = 0;
+	while (needle[l] != '\0' )
+		l++;
+	while (i != len && haystack[i] != '\0')
 	{
-		if (s[i] == a)
-			return ((char *)&s[i]);
+		if (haystack[i] == needle[j])
+			j++;
+		else if (j == l)
+			return ((char *)&haystack[i-l]);
+		else
+			j = 0;
 		i++;
 	}
-	if (a == '\0')
-		return ((char *)&s[i]);
 	return (NULL);
 }
 
 // #include <string.h>
 // #include <stdio.h>
 
-// int	main()
+// int	main(void)
 // {
-// 	char	c = 'n';
-// 	char	str[] = "muninn";
-// 	char	c1 = 'n';
-// 	char	str1[] = "muninn";
+// 	char hay[] = "goodmorning";
+// 	char needle[] = "aklsfjadjsfoasdlkajs";
+// 	// char *needle = NULL;
 
-// 	printf("%s\n", ft_strchr(str, c));
-// 	printf("%s\n", strchr(str1, c1));
+// 	printf("%s\n", ft_strnstr(hay, needle, 15));
+// 	printf("%s\n", strnstr(hay, needle, 15));
 // }

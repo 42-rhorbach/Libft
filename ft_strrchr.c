@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/07 12:27:32 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/07 17:07:17 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/10 12:19:36 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,20 @@ char	*ft_strrchr(const char *s, int c)
 	return (temp);
 }
 
+// #include <string.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+// int	main()
+// {
+// 	char *str;
+// 	str = malloc(5 * sizeof(char));
+// 	str[0] = 't';
+// 	str[1] = 'e';
+// 	str[2] = 's';
+// 	str[3] = 't';
+// 	str[4] = '\0';
 
-int	main()
-{
-	char *str;
-	str = malloc(5 * sizeof(char));
-	str[0] = 't';
-	str[1] = 'e';
-	str[2] = 's';
-	str[3] = 't';
-	str[4] = '\0';
-
-	printf("%s\n", ft_strrchr(str, 'e'));
-	printf("%s\n", strrchr(str, 'e'));
-}
+// 	printf("%s\n", ft_strrchr(str, ' '));
+// 	printf("%s\n", strrchr(str, ' '));
+// }

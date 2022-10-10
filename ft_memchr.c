@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 17:18:50 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/07 15:30:00 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/10 13:44:34 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *)&str[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 // #include <string.h>
@@ -35,15 +35,24 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 // int	main()
 // {
-// 	char *str;
-// 	str = malloc(5 * sizeof(char));
-// 	str[0] = 't';
-// 	str[1] = 'e';
-// 	str[2] = 's';
-// 	str[3] = 't';
-// 	str[4] = '\0';
+// 	// char *str;
+// 	// str = malloc(5 * sizeof(char));
+// 	// str[0] = 't';
+// 	// str[1] = 'e';
+// 	// str[2] = 's';
+// 	// str[3] = 't';
+// 	// str[4] = '\0';
+
+// 	char	c = 'd';
+// 	char	str[] = "hello";
+// 	char 	c2 = 'q';
+// 	char	c1 = 'a';
+// 	char	str1[] = "hello";
+
+// 	(void)c2;
+// 	// {'h', 'e', 'l', 'l', 'o', '\0', 'a', 'q', 't', 'e', 's', 't', '\0', 'd'};
 
 
-// 	printf("%s\n", ft_memchr(str, 'e', 0));
-// 	printf("%s\n", memchr(str, 'e', 0));
+// 	printf("%s\n", ft_memchr(str, c, 8));
+// 	printf("%s\n", memchr(str1, c1, 8));
 // }
