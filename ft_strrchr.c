@@ -6,14 +6,11 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/07 12:27:32 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/10 12:19:36 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/12 16:26:28 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// (void *)0 == (void *)'\0' == NULL
-// NULL == (void *)0
-
-#include <string.h> // TODO: Move this to header
+#include <string.h>
 
 char	*ft_strrchr(const char *s, int c)
 {

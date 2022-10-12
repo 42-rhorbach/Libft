@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 12:02:40 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/12 16:25:25 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/12 16:50:40 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,7 @@
 
 static int	ft_isspace(int c)
 {
-	if (c == ' ' || c == '\t' || c == '\n'
-		|| c == '\v' || c == '\f' || c == '\r')
-		return (1);
-	return (0);
+	return (c == ' ' || (c >= '\t' && c <= '\r'));
 }
 
 int	ft_atoi(const char *str)
@@ -30,7 +27,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	c = 0;
 	sign = -1;
-	while (ft_isspace(str[i]) == 1)
+	while (ft_isspace(str[i]))
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
