@@ -6,12 +6,20 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 12:02:40 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/12 12:03:55 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/12 16:25:25 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+
+static int	ft_isspace(int c)
+{
+	if (c == ' ' || c == '\t' || c == '\n'
+		|| c == '\v' || c == '\f' || c == '\r')
+		return (1);
+	return (0);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -22,7 +30,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	c = 0;
 	sign = -1;
-	while (str[i] == ' ')
+	while (ft_isspace(str[i]) == 1)
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
@@ -38,46 +46,22 @@ int	ft_atoi(const char *str)
 	return (c * sign);
 }
 
-/*
-MAX INT = 2147483647
-MIN INT = -2147483648
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
 
-2147483648
-...
--2147483648
+// int main ()
+// {
+//    int val;
+//    char str[100];
 
-2147483649
-...
--2147483648
--2147483647
-*/
-/*
-100	-4
-101	-3
-110	-2
-111	-1
-000	0
-001	1
-010	2
-011	3
-*/
+//    strcpy(str, " \f	-2147483647");
+//    val = atoi(str);
+//    printf("Nor | String value = %s, Int value = %d\n", str, val);
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+//    strcpy(str, " \f	-2147483647");
+//    val = ft_atoi(str);
+// 	printf("FT  | String value = %s, Int value = %d\n", str, val);
 
-int main ()
-{
-   int val;
-   char str[100];
-
-   strcpy(str, "-2147483649");
-   val = atoi(str);
-   printf("Nor | String value = %s, Int value = %d\n", str, val);
-
-   strcpy(str, "-2147483649");
-   val = ft_atoi(str);
-	printf("FT  | String value = %s, Int value = %d\n", str, val);
-
-   return(0);
-}
+//    return(0);
+// }
