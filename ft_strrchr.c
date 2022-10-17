@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/07 12:27:32 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/12 16:26:28 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/17 16:28:09 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (s[i] == a)
+		if (str[i] == a)
 			temp = &str[i];
 		i++;
 	}
+	if (a == '\0')
+		temp = &str[i];
 	return (temp);
 }
 
@@ -41,11 +43,11 @@ char	*ft_strrchr(const char *s, int c)
 // 	char *str;
 // 	str = malloc(5 * sizeof(char));
 // 	str[0] = 't';
-// 	str[1] = 'e';
+// 	str[1] = '\0';
 // 	str[2] = 's';
 // 	str[3] = 't';
 // 	str[4] = '\0';
 
-// 	printf("%s\n", ft_strrchr(str, ' '));
-// 	printf("%s\n", strrchr(str, ' '));
+// 	printf("%s\n", ft_strrchr(str, '\0'));
+// 	printf("%s\n", strrchr(str, '\0'));
 // }

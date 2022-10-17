@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:42:21 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/10 17:27:13 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/17 17:15:21 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
-	unsigned	char *str1;
-	unsigned	char *str2;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
@@ -27,6 +27,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 			return (str1[i] - str2[i]);
 		i++;
 	}
+	if (i == n)
+		return (0);
 	return (str1[i] - str2[i]);
 }
 
@@ -35,9 +37,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 // int	main(void)
 // {
-// 	char s1[] = "goodmo1ning";
-// 	char s2[] = "";
+// 	char s1[] = "abcdef";
+// 	char s2[] = "abcdefghijklmnop";
 
-// 	printf("%d\n", ft_strncmp(s1, s2, 4));
-// 	printf("%d\n", strncmp(s1, s2, 4));
+// 	printf("%d\n", ft_strncmp(s1, s2, 5));
+// 	printf("%d\n", strncmp(s1, s2, 5));
 // }

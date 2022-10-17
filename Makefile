@@ -6,13 +6,13 @@
 #    By: rhorbach <rhorbach@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 12:49:02 by rhorbach      #+#    #+#                  #
-#    Updated: 2022/10/14 18:29:54 by rhorbach      ########   odam.nl          #
+#    Updated: 2022/10/17 17:27:52 by rhorbach      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 HEADERFILES = libft.h
-NORMFLAGS = -Wall -Wextra -Werror
+NORMFLAGS = -Wall -Wextra -Werror $(if $(DEBUG),-g -fsanitize=address)
 OBJDIR = obj
 CFILES =						\
 	ft_atoi.c					\
@@ -29,12 +29,14 @@ CFILES =						\
 	ft_memmove.c				\
 	ft_memset.c					\
 	ft_strchr.c					\
+	ft_strdup.c					\
 	ft_strlcat.c				\
 	ft_strlcpy.c				\
 	ft_strlen.c					\
 	ft_strncmp.c				\
 	ft_strnstr.c				\
 	ft_strrchr.c				\
+	ft_substr.c					\
 	ft_tolower.c				\
 	ft_toupper.c
 OBJFILES = $(addprefix $(OBJDIR)/,$(CFILES:c=o))
@@ -56,5 +58,12 @@ fclean: clean
 
 re: fclean all
 
+ifdef DEBUG
+test: $(NAME)
+	gcc $(NORMFLAGS) main.c -L. -lft -o test_libft
+else
+test:
+	$(MAKE) test DEBUG=1
+endif
 
-.PHONY: all clean fcleam re
+.PHONY: all clean fcleam re test

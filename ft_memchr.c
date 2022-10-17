@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 17:18:50 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/10 13:44:34 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/17 14:06:06 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 // 	(void)c2;
 // 	// {'h', 'e', 'l', 'l', 'o', '\0', 'a', 'q', 't', 'e', 's', 't', '\0', 'd'};
-
 
 // 	printf("%s\n", ft_memchr(str, c, 8));
 // 	printf("%s\n", memchr(str1, c1, 8));

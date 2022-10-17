@@ -1,42 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcpy.c                                        :+:    :+:            */
+/*   ft_substr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/05 16:57:25 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/17 14:38:23 by rhorbach      ########   odam.nl         */
+/*   Created: 2022/10/16 15:07:07 by rhorbach      #+#    #+#                 */
+/*   Updated: 2022/10/17 14:03:15 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *pdst, const void *psrc, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t		index;
-	char		*dst;
-	const char	*src;
+	size_t	i;
+	char	*str;
+	char	*ptr;
 
-	index = 0;
-	dst = pdst;
-	src = psrc;
-	if (dst != NULL || src != NULL)
-	{
-		while (index != n)
-		{
-			dst[index] = src[index];
-			index++;
-		}
-	}
-	return (dst);
+	str = (char *)s;
+	i = 0;
+	while (i != start)
+		i++;
+	ptr = malloc((len + 1) * sizeof(char));
+	if (ptr != NULL)
+		ft_strlcpy(ptr, &str[i], (len + 1));
+	return (ptr);
 }
 
-// #include <string.h>
 // #include <stdio.h>
 
-// int	main()
+// int main(void)
 // {
-// 	printf("%s\n", memcpy(((void *)0), ((void *)0), 3));
-// 	printf("%s\n", ft_memcpy(((void *)0), ((void *)0), 3));
+// 	char	str[] = "hallo";
+// 	printf("%s\n", ft_substr(str, 1, 3));
 // }

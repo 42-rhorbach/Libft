@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/12 17:00:19 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/12 17:45:15 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/17 17:37:48 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,23 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	len = 0;
 	index = 0;
-	while (dst[len] != '\0')
+	while (dst[len] != '\0' && len != dstsize)
 		len++;
 	return (ft_strlcpy(&dst[len], src, dstsize - len) + len);
 }
 
-#include <string.h>
-#include <stdio.h>
+// #include <string.h>
+// #include <stdio.h>
 
-int	main(void)
-{
-	char s1[20] = "goodmorning";  //12
-	char s2[] = "ciaoo00000";
-	char s3[20] = "goodmorning";  //12
-	char s4[] = "ciaoo00000";
+// int	main(void)
+// {
+// 	char s1[20] = "goodmorning";  //12
+// 	char s2[] = "ciaoo00000";
+// 	char s3[20] = "goodmorning";  //12
+// 	char s4[] = "ciaoo00000";
 
-	printf("%lu\n", strlcat(s1, s2, 20));
-	printf("%lu\n", ft_strlcat(s3, s4, 20));
-	printf("%s\n", s1);
-	printf("%s\n", s3);
-}
+// 	printf("%lu\n", strlcat(s1, s2, 20));
+// 	printf("%lu\n", ft_strlcat(s3, s4, 20));
+// 	printf("%s\n", s1);
+// 	printf("%s\n", s3);
+// }

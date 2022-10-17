@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 13:05:58 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/10 16:41:37 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/17 14:08:02 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		if (haystack[i] == needle[j])
 			j++;
 		else if (j == l)
-			return ((char *)&haystack[i-l]);
+			return ((char *)&haystack[i - l]);
 		else
 			j = 0;
 		i++;

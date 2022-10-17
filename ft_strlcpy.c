@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/12 15:01:12 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/12 17:46:01 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/17 15:09:46 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t		index;
 
 	index = 0;
-	while (index < dstsize - 1 && src[index] != '\0')
+	if (dstsize != 0)
 	{
-		dst[index] = src[index];
-		index++;
+		while (index + 1 < dstsize && src[index] != '\0')
+		{
+			dst[index] = src[index];
+			index++;
+		}
+		dst[index] = '\0';
 	}
-	dst[index] = '\0';
 	while (src[index] != '\0')
 		index++;
 	return (index);
