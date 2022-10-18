@@ -6,7 +6,7 @@
 #    By: rhorbach <rhorbach@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 12:49:02 by rhorbach      #+#    #+#                  #
-#    Updated: 2022/10/17 17:27:52 by rhorbach      ########   odam.nl          #
+#    Updated: 2022/10/18 13:31:00 by rhorbach      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ CFILES =						\
 	ft_memset.c					\
 	ft_strchr.c					\
 	ft_strdup.c					\
+	ft_strjoin.c				\
 	ft_strlcat.c				\
 	ft_strlcpy.c				\
 	ft_strlen.c					\

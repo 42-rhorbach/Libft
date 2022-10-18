@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 14:46:58 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/17 14:08:28 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/18 13:30:42 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void			*ft_memmove(void *pdst, const void *psrc, size_t len);
 void			*ft_memset(void *ptr, int c, size_t n);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strdup(const char *str);
+char			*ft_strjoin(char const *s1, char const *s2);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
 unsigned long	ft_strlen(char *ptr);

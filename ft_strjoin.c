@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strnstr.c                                       :+:    :+:            */
+/*   ft_strjoin.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/10 13:05:58 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/18 18:19:03 by rhorbach      ########   odam.nl         */
+/*   Created: 2022/10/18 13:12:40 by rhorbach      #+#    #+#                 */
+/*   Updated: 2022/10/18 13:44:15 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	j;
+	char	*str1;
+	char	*str2;
+	char	*nstr;
+	size_t	len1;
+	size_t	len2;
 
-	i = 0;
-	if (needle[0] == '\0')
-		return ((char *)haystack);
-	while (haystack[i] != '\0' && i < len)
+	str1 = (char *)s1;
+	str2 = (char *)s2;
+	len1 = (ft_strlen((char *)str1) + 1);
+	len2 = (ft_strlen((char *)str2));
+	nstr = malloc((len1 + len2) * sizeof(char));
+	if (nstr != NULL)
 	{
-		j = 0;
-		while (haystack[i + j] != '\0' && (i + j) < len
-			&& haystack[i + j] == needle[j])
-			j++;
-		if (needle[j] == '\0')
-			return ((char *)&haystack[i]);
-		i++;
+		ft_strlcpy(nstr, str1, len1);
+		ft_strlcat(nstr, str2, (len1 + len2));
 	}
-	return (NULL);
+	return (nstr);
 }
