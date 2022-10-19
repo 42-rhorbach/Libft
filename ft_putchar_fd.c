@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strtrim.c                                       :+:    :+:            */
+/*   ft_putchar_fd.c                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/18 15:27:36 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/19 15:48:12 by rhorbach      ########   odam.nl         */
+/*   Created: 2022/10/19 15:34:48 by rhorbach      #+#    #+#                 */
+/*   Updated: 2022/10/19 16:09:35 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 
-char	*ft_strtrim(char const *s1, char const *set) //WIP
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	s;
-
-	s = 0;
-	while (set[s] != '/0')
-	{
-
-	}
+	write(fd, &c, 1);
 }
-
-// el e -> l

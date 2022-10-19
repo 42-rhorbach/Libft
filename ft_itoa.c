@@ -1,40 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_substr.c                                        :+:    :+:            */
+/*   ft_itoa.c                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/16 15:07:07 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/19 15:48:15 by rhorbach      ########   odam.nl         */
+/*   Created: 2022/10/19 12:37:15 by rhorbach      #+#    #+#                 */
+/*   Updated: 2022/10/19 15:48:24 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len) //WIP
+static int	ft_intlen(int n) //WIP
 {
-	//size_t			i;
-	char			*str;
-	char			*ptr;
-	unsigned long	strlen;
+	int	counter;
 
-	str = (char *)s;
-	strlen = ft_strlen(str);
-	if (strlen < start && strlen < )
-
-
-		ptr = malloc((len + 1) * sizeof(char));
-		if (ptr != NULL)
-			ft_strlcpy(ptr, &str[start], (len + 1));
-	return (ptr);
+	counter = 0;
+	while (n != 0)
+	{
+		n = n / 10;
+		counter++;
+	}
+	return (counter);
 }
 
-// #include <stdio.h>
+char	*ft_itoa(int n)
+{
+	char	*ptr;
+	int		len;
+	int		i;
 
-// int main(void)
-// {
-// 	char	str[] = "hallo";
-// 	printf("%s\n", ft_substr(str, 1, 3));
-// }
+
+	len = ft_intlen(n); // 125
+	i = (len - 1);
+	ptr = malloc((len + 1) * sizeof(char));
+	if (ptr != NULL)
+	{
+		while (i != 0)
+		{
+			if (n != 0)
+			{
+				n = n / 10; // 125/10 -> 12,5
+				ptr[i] = ((n % 10) + 48); // 12,5%10 -> 5
+			}
+			i--;
+		}
+	}
+	return (ptr);
+}
