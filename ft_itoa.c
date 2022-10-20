@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 12:37:15 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/19 15:48:24 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/20 17:22:20 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ static int	ft_intlen(int n) //WIP
 	int	counter;
 
 	counter = 0;
+	if (n <= 0)
+		counter++;
 	while (n != 0)
 	{
 		n = n / 10;
@@ -26,27 +28,59 @@ static int	ft_intlen(int n) //WIP
 	return (counter);
 }
 
+// char	*ft_itoa(int n)
+// {
+// 	char	*ptr;
+// 	int		len;
+// 	int		sign;
+// 	int		i;
+
+// 	len = ft_intlen(n);
+// 	i = len - 1;
+// 	sign = 1;
+// 	ptr = malloc((len + 1) * sizeof(char));
+// 	if (ptr == NULL)
+// 		return (NULL);
+// 	if (n < 0)
+// 	{
+// 		ptr[0] = '-';
+// 		sign = -1;
+// 	}
+// 	while (i != 0)
+// 	{
+// 		ptr[i] = sign * (n % 10) + '0';
+// 		n /= 10;
+// 		i--;
+// 	}
+// 	if (sign == 1)
+// 		ptr[i] = (n % 10) + '0';
+// 	ptr[len] = '\0';
+// 	return (ptr);
+// }
+
 char	*ft_itoa(int n)
 {
 	char	*ptr;
-	int		len;
+	int		sign;
 	int		i;
 
-
-	len = ft_intlen(n); // 125
-	i = (len - 1);
-	ptr = malloc((len + 1) * sizeof(char));
-	if (ptr != NULL)
+	i = ft_intlen(n);
+	sign = 1;
+	ptr = malloc((i + 1) * sizeof(char));
+	if (ptr == NULL)
+		return (NULL);
+	ptr[i--] = '\0';
+	if (n < 0)
+		sign *= -1;
+	while (i != 0)
 	{
-		while (i != 0)
-		{
-			if (n != 0)
-			{
-				n = n / 10; // 125/10 -> 12,5
-				ptr[i] = ((n % 10) + 48); // 12,5%10 -> 5
-			}
-			i--;
-		}
+		ptr[i] = sign * (n % 10) + '0';
+		n /= 10;
+		i--;
 	}
+	if (sign == 1)
+		ptr[i] = (n % 10) + '0';
+	else
+		ptr[i] = '-';
 	return (ptr);
 }

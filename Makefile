@@ -6,7 +6,7 @@
 #    By: rhorbach <rhorbach@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 12:49:02 by rhorbach      #+#    #+#                  #
-#    Updated: 2022/10/19 16:15:16 by rhorbach      ########   odam.nl          #
+#    Updated: 2022/10/20 13:23:42 by rhorbach      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ CFILES =						\
 	ft_memset.c					\
 	ft_putchar_fd.c				\
 	ft_putendl_fd.c				\
+	ft_putnbr_fd.c				\
 	ft_putstr_fd.c				\
 	ft_strchr.c					\
 	ft_strdup.c					\

@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 14:46:58 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/19 16:14:54 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/20 13:23:15 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void			*ft_memmove(void *pdst, const void *psrc, size_t len);
 void			*ft_memset(void *ptr, int c, size_t n);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *s, int fd);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strdup(const char *str);
