@@ -6,7 +6,7 @@
 #    By: rhorbach <rhorbach@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 12:49:02 by rhorbach      #+#    #+#                  #
-#    Updated: 2022/10/24 17:45:28 by rhorbach      ########   odam.nl          #
+#    Updated: 2022/10/25 15:27:17 by rhorbach      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,9 +40,11 @@ CFILES =						\
 	ft_strlcat.c				\
 	ft_strlcpy.c				\
 	ft_strlen.c					\
+	ft_strmapi.c				\
 	ft_strncmp.c				\
 	ft_strnstr.c				\
 	ft_strrchr.c				\
+	ft_strtrim.c				\
 	ft_substr.c					\
 	ft_tolower.c				\
 	ft_toupper.c
