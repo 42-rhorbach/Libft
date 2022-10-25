@@ -6,14 +6,14 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 12:37:15 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/20 17:22:20 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/24 15:12:41 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static int	ft_intlen(int n) //WIP
+static int	ft_intlen(int n)
 {
 	int	counter;
 

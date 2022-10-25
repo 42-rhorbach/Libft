@@ -6,7 +6,7 @@
 #    By: rhorbach <rhorbach@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 12:49:02 by rhorbach      #+#    #+#                  #
-#    Updated: 2022/10/20 13:23:42 by rhorbach      ########   odam.nl          #
+#    Updated: 2022/10/24 17:45:28 by rhorbach      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ CFILES =						\
 	ft_putstr_fd.c				\
 	ft_strchr.c					\
 	ft_strdup.c					\
+	ft_striteri.c				\
 	ft_strjoin.c				\
 	ft_strlcat.c				\
 	ft_strlcpy.c				\
@@ -42,9 +43,9 @@ CFILES =						\
 	ft_strncmp.c				\
 	ft_strnstr.c				\
 	ft_strrchr.c				\
+	ft_substr.c					\
 	ft_tolower.c				\
-	ft_toupper.c				\
-	#ft_substr.c
+	ft_toupper.c
 OBJFILES = $(addprefix $(OBJDIR)/,$(CFILES:c=o))
 
 all: $(NAME)

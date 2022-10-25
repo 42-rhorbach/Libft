@@ -6,35 +6,37 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/16 15:07:07 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/19 15:48:15 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/25 13:23:13 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len) //WIP
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	//size_t			i;
 	char			*str;
 	char			*ptr;
 	unsigned long	strlen;
 
 	str = (char *)s;
 	strlen = ft_strlen(str);
-	if (strlen < start && strlen < )
-
-
+	if (start > strlen)
+		return (ft_strdup(""));
+	if ((strlen - start) > len)
+	{
 		ptr = malloc((len + 1) * sizeof(char));
 		if (ptr != NULL)
 			ft_strlcpy(ptr, &str[start], (len + 1));
+	}
+	else
+	{
+		ptr = malloc(((strlen - start) + 1) * sizeof(char));
+		if (ptr != NULL)
+			ft_strlcpy(ptr, &str[start], ((strlen - start) + 1));
+	}
 	return (ptr);
 }
 
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	char	str[] = "hallo";
-// 	printf("%s\n", ft_substr(str, 1, 3));
-// }
+//rewrite using strnlen as static function,
+//comparing start and length as the seperate parts to shorten f.
