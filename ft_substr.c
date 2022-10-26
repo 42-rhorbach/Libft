@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/16 15:07:07 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/25 13:23:13 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/26 17:21:55 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*str;
-	char			*ptr;
-	unsigned long	strlen;
+	char	*str;
+	char	*ptr;
+	size_t	strlen;
 
 	str = (char *)s;
 	strlen = ft_strlen(str);

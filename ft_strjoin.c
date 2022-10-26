@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 13:12:40 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/18 13:44:15 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/26 17:14:20 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	str1 = (char *)s1;
 	str2 = (char *)s2;
-	len1 = (ft_strlen((char *)str1) + 1);
-	len2 = (ft_strlen((char *)str2));
+	len1 = (ft_strlen(str1) + 1);
+	len2 = (ft_strlen(str2));
 	nstr = malloc((len1 + len2) * sizeof(char));
 	if (nstr != NULL)
 	{

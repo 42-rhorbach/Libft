@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 15:27:36 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/25 16:31:07 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/26 17:14:43 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	if (s1[i] == '\0')
 		return (ft_strdup(""));
-	j = ft_strlen((char *)s1) - 1;
+	j = ft_strlen(s1) - 1;
 	while (j != 0)
 	{
 		if (ft_strchr(set, s1[j]) == NULL)

@@ -6,32 +6,18 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/04 12:42:38 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/04 17:01:30 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/26 17:21:05 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
-*/
+#include <stdlib.h>
 
-unsigned long	ft_strlen(char *ptr)
+size_t	ft_strlen(const char *ptr)
 {
-	unsigned long	counter;
+	size_t	counter;
 
 	counter = 0;
 	while (ptr[counter] != '\0')
 		counter++;
 	return (counter);
 }
-
-/*
-int main()
-{
-	char	a[] = "test";
-
-	printf ("%lu\n", ft_strlen(a));
-	printf ("%lu", strlen(a));
-}
-*/

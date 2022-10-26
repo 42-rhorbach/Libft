@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/16 12:56:06 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/17 14:09:50 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/26 17:21:18 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strdup(const char *str)
 {
-	char			*ptr;
-	unsigned long	count;
+	char	*ptr;
+	size_t	count;
 
-	count = (ft_strlen((char *)str) + 1);
+	count = (ft_strlen(str) + 1);
 	ptr = malloc(count * sizeof(char));
 	if (ptr != NULL)
 		ft_strlcpy(ptr, str, count);
