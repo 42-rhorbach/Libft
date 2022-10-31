@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 12:37:15 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/24 15:12:41 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/10/27 14:49:03 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,33 @@ static int	ft_intlen(int n)
 		counter++;
 	}
 	return (counter);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*ptr;
+	int		sign;
+	int		i;
+
+	i = ft_intlen(n);
+	sign = 1;
+	ptr = malloc((i + 1) * sizeof(char));
+	if (ptr == NULL)
+		return (NULL);
+	ptr[i--] = '\0';
+	if (n < 0)
+		sign *= -1;
+	while (i != 0)
+	{
+		ptr[i] = sign * (n % 10) + '0';
+		n /= 10;
+		i--;
+	}
+	if (sign == 1)
+		ptr[i] = (n % 10) + '0';
+	else
+		ptr[i] = '-';
+	return (ptr);
 }
 
 // char	*ft_itoa(int n)
@@ -57,30 +84,3 @@ static int	ft_intlen(int n)
 // 	ptr[len] = '\0';
 // 	return (ptr);
 // }
-
-char	*ft_itoa(int n)
-{
-	char	*ptr;
-	int		sign;
-	int		i;
-
-	i = ft_intlen(n);
-	sign = 1;
-	ptr = malloc((i + 1) * sizeof(char));
-	if (ptr == NULL)
-		return (NULL);
-	ptr[i--] = '\0';
-	if (n < 0)
-		sign *= -1;
-	while (i != 0)
-	{
-		ptr[i] = sign * (n % 10) + '0';
-		n /= 10;
-		i--;
-	}
-	if (sign == 1)
-		ptr[i] = (n % 10) + '0';
-	else
-		ptr[i] = '-';
-	return (ptr);
-}

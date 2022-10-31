@@ -6,7 +6,7 @@
 #    By: rhorbach <rhorbach@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 12:49:02 by rhorbach      #+#    #+#                  #
-#    Updated: 2022/10/26 15:28:24 by rhorbach      ########   odam.nl          #
+#    Updated: 2022/10/31 16:07:37 by rhorbach      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,28 @@ CFILES =						\
 	ft_substr.c					\
 	ft_tolower.c				\
 	ft_toupper.c
+
+# BONUSFILES =					\
+# 	ft_lstnew.c					\
+# 	ft_lstsize.c				\
+# 	ft_lstadd_front.c			\
+# 	ft_lstlast.c				\
+# 	ft_lstadd_back.c			\
+#	ft_lstdelone.c				\
+#	ft_lstclear.c
+
+BONUSFILES =						\
+	ft_lstnew_bonus.c				\
+	ft_lstsize_bonus.c				\
+	ft_lstadd_front_bonus.c			\
+	ft_lstlast_bonus.c				\
+	ft_lstadd_back_bonus.c			\
+	ft_lstdelone_bonus.c			\
+	ft_lstclear_bonus.c
+ifdef BONUS
+CFILES += $(BONUSFILES)
+endif
+
 OBJFILES = $(addprefix $(OBJDIR)/,$(CFILES:c=o))
 
 all: $(NAME)
@@ -68,6 +90,10 @@ fclean: clean
 
 re: fclean all
 
+bonus:
+	$(MAKE) all BONUS=1
+
+
 ifdef DEBUG
 test: $(NAME)
 	gcc $(NORMFLAGS) main.c -L. -lft -o test_libft
@@ -76,4 +102,4 @@ test:
 	$(MAKE) test DEBUG=1
 endif
 
-.PHONY: all clean fcleam re test
+.PHONY: all clean fcleam re test bonus
