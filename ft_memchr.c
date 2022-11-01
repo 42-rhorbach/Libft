@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 17:18:50 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/17 14:06:06 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/11/01 16:49:03 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char			a;
-	size_t			i;
-	const char		*str;
+	const unsigned char	*str = s;
+	unsigned char		a;
+	size_t				i;
 
-	str = s;
 	a = c;
 	i = 0;
 	while (i != n)

@@ -6,7 +6,7 @@
 #    By: rhorbach <rhorbach@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 12:49:02 by rhorbach      #+#    #+#                  #
-#    Updated: 2022/10/31 16:07:37 by rhorbach      ########   odam.nl          #
+#    Updated: 2022/11/01 16:32:15 by rhorbach      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,10 @@ BONUSFILES =						\
 	ft_lstlast_bonus.c				\
 	ft_lstadd_back_bonus.c			\
 	ft_lstdelone_bonus.c			\
-	ft_lstclear_bonus.c
+	ft_lstclear_bonus.c				\
+	ft_lstiter_bonus.c				\
+	ft_lstmap_bonus.c
+
 ifdef BONUS
 CFILES += $(BONUSFILES)
 endif

@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstclear_bonus.c                                :+:    :+:            */
+/*   ft_lstiter_bonus.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/31 15:37:40 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/11/01 16:45:05 by rhorbach      ########   odam.nl         */
+/*   Created: 2022/11/01 13:00:21 by rhorbach      #+#    #+#                 */
+/*   Updated: 2022/11/01 13:26:36 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void	*))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*temp;
-
-	while (*lst != NULL)
+	while (lst != NULL)
 	{
-		temp = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = temp;
+		(*f)(lst->content);
+		lst = lst->next;
 	}
-	*lst = NULL;
 }
