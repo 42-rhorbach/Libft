@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/12 17:00:19 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/17 17:37:48 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/11/01 12:54:18 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	len = 0;
 	index = 0;
-	while (dst[len] != '\0' && len != dstsize)
+	while (len != dstsize && dst[len] != '\0')
 		len++;
 	return (ft_strlcpy(&dst[len], src, dstsize - len) + len);
 }
