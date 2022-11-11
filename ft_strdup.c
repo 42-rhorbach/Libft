@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/16 12:56:06 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/26 17:21:18 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/11/11 13:02:11 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,3 @@ char	*ft_strdup(const char *str)
 		ft_strlcpy(ptr, str, count);
 	return (ptr);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int main(void)
-// {
-// 	char	str1[] = "hallo";
-// 	printf("%s\n", ft_strdup(str1));
-// 	printf("%s\n", strdup(str1));
-// }

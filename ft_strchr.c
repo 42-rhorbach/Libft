@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 13:57:32 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/10 14:57:31 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/11/11 13:01:51 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-
-// int	main()
-// {
-// 	char	c = 'n';
-// 	char	str[] = "muninn";
-// 	char	c1 = 'n';
-// 	char	str1[] = "muninn";
-
-// 	printf("%s\n", ft_strchr(str, c));
-// 	printf("%s\n", strchr(str1, c1));
-// }

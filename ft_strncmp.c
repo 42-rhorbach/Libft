@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:42:21 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/17 17:15:21 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/11/11 13:04:39 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	return (str1[i] - str2[i]);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char s1[] = "abcdef";
-// 	char s2[] = "abcdefghijklmnop";
-
-// 	printf("%d\n", ft_strncmp(s1, s2, 5));
-// 	printf("%d\n", strncmp(s1, s2, 5));
-// }

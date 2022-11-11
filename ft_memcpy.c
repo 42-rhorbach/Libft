@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 16:57:25 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/17 14:38:23 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/11/11 12:59:09 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ void	*ft_memcpy(void *pdst, const void *psrc, size_t n)
 	}
 	return (dst);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-
-// int	main()
-// {
-// 	printf("%s\n", memcpy(((void *)0), ((void *)0), 3));
-// 	printf("%s\n", ft_memcpy(((void *)0), ((void *)0), 3));
-// }

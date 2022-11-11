@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 12:21:25 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/12 16:26:58 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/11/11 12:59:43 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,3 @@ void	*ft_memmove(void *pdst, const void *psrc, size_t len)
 	}
 	return (dst);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-
-// int	main()
-// {
-// 	char str[] = "foobarz";
-// 	char str1[] = "foobarz"; // fffffrz | ffoobrz :goed
-
-// 	memmove(str, str + 1, 4);
-// 	ft_memmove(str1, str1 + 1, 4);
-// 	printf("%s\n", str);
-// 	printf("%s\n", str1);
-// }

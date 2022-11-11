@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 17:18:50 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/11/01 16:49:03 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/11/11 12:58:23 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,29 +28,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-
-// int	main()
-// {
-// 	// char *str;
-// 	// str = malloc(5 * sizeof(char));
-// 	// str[0] = 't';
-// 	// str[1] = 'e';
-// 	// str[2] = 's';
-// 	// str[3] = 't';
-// 	// str[4] = '\0';
-
-// 	char	c = 'd';
-// 	char	str[] = "hello";
-// 	char 	c2 = 'q';
-// 	char	c1 = 'a';
-// 	char	str1[] = "hello";
-
-// 	(void)c2;
-// 	// {'h', 'e', 'l', 'l', 'o', '\0', 'a', 'q', 't', 'e', 's', 't', '\0', 'd'};
-
-// 	printf("%s\n", ft_memchr(str, c, 8));
-// 	printf("%s\n", memchr(str1, c1, 8));
-// }

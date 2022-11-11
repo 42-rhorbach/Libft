@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 15:27:36 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/26 17:14:43 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/11/11 13:05:17 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (ft_substr(s1, i, j - i + 1));
 }
-
-// --old while
-// while (s1[i] != '\0' && set[j] != '\0')
-// {
-// 	if (s1[i] == set[j])
-// 	{
-// 		j = 0;
-// 		i++;
-// 	}
-// 	else
-// 		j++;
-// }

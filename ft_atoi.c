@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 12:02:40 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/12 16:50:40 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/11/11 12:44:11 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,23 +42,3 @@ int	ft_atoi(const char *str)
 	}
 	return (c * sign);
 }
-
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
-
-// int main ()
-// {
-//    int val;
-//    char str[100];
-
-//    strcpy(str, " \f	-2147483647");
-//    val = atoi(str);
-//    printf("Nor | String value = %s, Int value = %d\n", str, val);
-
-//    strcpy(str, " \f	-2147483647");
-//    val = ft_atoi(str);
-// 	printf("FT  | String value = %s, Int value = %d\n", str, val);
-
-//    return(0);
-// }

@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/04 13:34:08 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/06 17:11:38 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/11/11 13:00:21 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,3 @@ void	*ft_memset(void *ptr, int c, size_t n)
 	}
 	return (str);
 }
-
-// #include <stdio.h>
-// #include <ctype.h>
-// #include <string.h>
-
-// int	main()
-// {
-// 	char	str1[50];
-// 	char	str2[50];
-
-// 	printf ("%s\n", ft_memset(str1, '$', 60));
-//  printf ("%s", memset(str2, '$', 50));
-// }

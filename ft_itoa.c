@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 12:37:15 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/27 14:49:03 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/11/11 12:53:16 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,33 +54,3 @@ char	*ft_itoa(int n)
 		ptr[i] = '-';
 	return (ptr);
 }
-
-// char	*ft_itoa(int n)
-// {
-// 	char	*ptr;
-// 	int		len;
-// 	int		sign;
-// 	int		i;
-
-// 	len = ft_intlen(n);
-// 	i = len - 1;
-// 	sign = 1;
-// 	ptr = malloc((len + 1) * sizeof(char));
-// 	if (ptr == NULL)
-// 		return (NULL);
-// 	if (n < 0)
-// 	{
-// 		ptr[0] = '-';
-// 		sign = -1;
-// 	}
-// 	while (i != 0)
-// 	{
-// 		ptr[i] = sign * (n % 10) + '0';
-// 		n /= 10;
-// 		i--;
-// 	}
-// 	if (sign == 1)
-// 		ptr[i] = (n % 10) + '0';
-// 	ptr[len] = '\0';
-// 	return (ptr);
-// }

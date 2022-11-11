@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/12 15:01:12 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/17 15:09:46 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/11/11 13:03:00 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		index++;
 	return (index);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char s1[] = "goodmorningafgsfg";  //12
-// 	char s2[] = "baadeveningfhhhhhhhhhh";
-// 	char s3[] = "goodmorningafgsfg";  //12
-// 	char s4[] = "baadeveningfhhhhhhhhhh";
-
-// 	printf("%lu\n", strlcpy(s1, s2, 18));
-// 	printf("%lu\n", ft_strlcpy(s3, s4, 18));
-// 	printf("%s\n", s1);
-// 	printf("%s\n", s3);
-// }

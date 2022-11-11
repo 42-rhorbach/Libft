@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 17:18:50 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/17 14:07:03 by rhorbach      ########   odam.nl         */
+/*   Updated: 2022/11/11 12:58:43 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,3 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// #include <ctype.h>
-// #include <string.h>
-
-// int	main()
-// {
-// 	char s1[] = "hello";
-// 	char s2[] = "hello";
-
-// 	printf ("%i\n", ft_memcmp(s1, s2, 0));
-// 	printf ("%i\n", memcmp(s1, s2, 0));
-// }
