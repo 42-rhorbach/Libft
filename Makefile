@@ -6,7 +6,7 @@
 #    By: rhorbach <rhorbach@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 12:49:02 by rhorbach      #+#    #+#                  #
-#    Updated: 2023/05/08 17:18:09 by rhorbach      ########   odam.nl          #
+#    Updated: 2023/05/11 13:17:50 by rhorbach      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,9 @@ CFILES =						\
 	ft_lstdelone.c				\
 	ft_lstclear.c				\
 	ft_lstiter.c				\
-	ft_lstmap.c
+	ft_lstmap.c					\
+	ft_lstnew_front.c			\
+	ft_lstnew_back.c
 
 OBJFILES = $(addprefix $(OBJDIR)/,$(CFILES:c=o))
 
