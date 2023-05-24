@@ -6,7 +6,7 @@
 #    By: rhorbach <rhorbach@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 12:49:02 by rhorbach      #+#    #+#                  #
-#    Updated: 2023/05/24 15:41:46 by rhorbach      ########   odam.nl          #
+#    Updated: 2023/05/24 15:41:55 by rhorbach      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,8 @@ NAME = libft.a
 HEADERFILES = \
 	./libft.h						\
 	./src/chr/chr.h					\
+	./src/gnl/get_next_line_int.h	\
+	./src/gnl/get_next_line.h		\
 	./src/io/io.h					\
 	./src/lst/lst.h					\
 	./src/mem/mem.h					\
@@ -30,6 +32,8 @@ CFILES =							\
 	./src/chr/ft_isprint.c			\
 	./src/chr/ft_tolower.c			\
 	./src/chr/ft_toupper.c			\
+									\
+	./src/gnl/get_next_line.c		\
 									\
 	./src/io/ft_putchar_fd.c		\
 	./src/io/ft_putendl_fd.c		\

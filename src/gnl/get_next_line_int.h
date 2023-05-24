@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   libft.h                                            :+:    :+:            */
+/*   get_next_line_int.h                                :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/05 14:46:58 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/05/24 15:41:22 by rhorbach      ########   odam.nl         */
+/*   Created: 2023/01/25 17:28:57 by rhorbach      #+#    #+#                 */
+/*   Updated: 2023/05/24 15:15:51 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef GET_NEXT_LINE_INT_H
+# define GET_NEXT_LINE_INT_H
 
-# include "./src/chr/chr.h"
-# include "./src/gnl/get_next_line.h"
-# include "./src/io/io.h"
-# include "./src/lst/lst.h"
-# include "./src/mem/mem.h"
-# include "./src/num/num.h"
-# include "./src/str/str.h"
+# include "libft.h"
+# include <unistd.h>
+# include <fcntl.h>
+# include <stdlib.h>
+# include <stdio.h>
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
+
+# if BUFFER_SIZE <= 0
+#  error BUFFER_SIZE should not be less than 1
+# endif
+
+typedef enum e_nl_found {
+	ERROR,
+	NL_NOT_FOUND,
+	NL_FOUND
+}	t_nl_found;
 
 #endif
