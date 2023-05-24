@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memmove.c                                       :+:    :+:            */
+/*   chr.h                                              :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/10 12:21:25 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/11/11 12:59:43 by rhorbach      ########   odam.nl         */
+/*   Created: 2023/05/24 15:31:48 by rhorbach      #+#    #+#                 */
+/*   Updated: 2023/05/24 15:32:04 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#ifndef CHR_H
+# define CHR_H
 
-void	*ft_memmove(void *pdst, const void *psrc, size_t len)
-{
-	size_t		index;
-	char		*dst;
-	const char	*src;
+int		ft_isalnum(int arg);
+int		ft_isalpha(int arg);
+int		ft_isascii(int arg);
+int		ft_isdigit(int arg);
+int		ft_isprint(int arg);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 
-	index = len;
-	dst = pdst;
-	src = psrc;
-	if (src > dst)
-		ft_memcpy(dst, src, len);
-	if (src < dst)
-	{
-		while (index > 0)
-		{
-			index--;
-			dst[index] = src[index];
-		}
-	}
-	return (dst);
-}
+#endif

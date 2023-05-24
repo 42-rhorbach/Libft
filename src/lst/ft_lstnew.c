@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   libft.h                                            :+:    :+:            */
+/*   ft_lstnew.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/05 14:46:58 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/05/24 15:41:15 by rhorbach      ########   odam.nl         */
+/*   Created: 2022/10/27 12:23:20 by rhorbach      #+#    #+#                 */
+/*   Updated: 2023/05/24 15:39:45 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
+#include <stdlib.h>
 
-# include "./src/chr/chr.h"
-# include "./src/io/io.h"
-# include "./src/lst/lst.h"
-# include "./src/mem/mem.h"
-# include "./src/num/num.h"
-# include "./src/str/str.h"
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*new_list;
 
-#endif
+	new_list = malloc(sizeof(t_list));
+	if (new_list == NULL)
+		return (NULL);
+	new_list->content = content;
+	new_list->next = NULL;
+	return (new_list);
+}

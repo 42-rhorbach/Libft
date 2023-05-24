@@ -1,23 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   libft.h                                            :+:    :+:            */
+/*   ft_memmove.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/05 14:46:58 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/05/24 15:41:15 by rhorbach      ########   odam.nl         */
+/*   Created: 2022/10/10 12:21:25 by rhorbach      #+#    #+#                 */
+/*   Updated: 2023/05/24 15:12:49 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <stdlib.h>
+#include "libft.h"
 
-# include "./src/chr/chr.h"
-# include "./src/io/io.h"
-# include "./src/lst/lst.h"
-# include "./src/mem/mem.h"
-# include "./src/num/num.h"
-# include "./src/str/str.h"
+void	*ft_memmove(void *pdst, const void *psrc, size_t len)
+{
+	size_t		index;
+	char *const	dst = pdst;
+	const char	*src = psrc;
 
-#endif
+	if (src < dst)
+	{
+		index = len;
+		while (index > 0)
+		{
+			index--;
+			dst[index] = src[index];
+		}
+	}
+	else
+	{
+		index = 0;
+		while (index < len)
+		{
+			dst[index] = src[index];
+			index++;
+		}
+	}
+	return (dst);
+}

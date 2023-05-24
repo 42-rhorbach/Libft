@@ -6,65 +6,78 @@
 #    By: rhorbach <rhorbach@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 12:49:02 by rhorbach      #+#    #+#                  #
-#    Updated: 2023/05/11 13:17:50 by rhorbach      ########   odam.nl          #
+#    Updated: 2023/05/24 15:41:46 by rhorbach      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-HEADERFILES = libft.h
+HEADERFILES = \
+	./libft.h						\
+	./src/chr/chr.h					\
+	./src/io/io.h					\
+	./src/lst/lst.h					\
+	./src/mem/mem.h					\
+	./src/num/num.h					\
+	./src/str/str.h
+
 NORMFLAGS = -Wall -Wextra -Werror $(if $(DEBUG),-g -fsanitize=address)
 OBJDIR = obj
-CFILES =						\
-	ft_atoi.c					\
-	ft_bzero.c					\
-	ft_calloc.c					\
-	ft_isalnum.c				\
-	ft_isalpha.c				\
-	ft_isascii.c				\
-	ft_isdigit.c				\
-	ft_isprint.c				\
-	ft_itoa.c					\
-	ft_itoh.c					\
-	ft_itoh.c					\
-	ft_memchr.c					\
-	ft_memcmp.c					\
-	ft_memcpy.c					\
-	ft_memmove.c				\
-	ft_memset.c					\
-	ft_putchar_fd.c				\
-	ft_putendl_fd.c				\
-	ft_putnbr_fd.c				\
-	ft_puthexnbr_fd.c			\
-	ft_putstr_fd.c				\
-	ft_putunbr_fd.c				\
-	ft_split.c					\
-	ft_strchr.c					\
-	ft_strdup.c					\
-	ft_striteri.c				\
-	ft_strjoin.c				\
-	ft_strlcat.c				\
-	ft_strlcpy.c				\
-	ft_strlen.c					\
-	ft_strmapi.c				\
-	ft_strncmp.c				\
-	ft_strnstr.c				\
-	ft_strrchr.c				\
-	ft_strtrim.c				\
-	ft_substr.c					\
-	ft_tolower.c				\
-	ft_toupper.c				\
-	ft_lstnew.c					\
-	ft_lstsize.c				\
-	ft_lstadd_front.c			\
-	ft_lstlast.c				\
-	ft_lstadd_back.c			\
-	ft_lstdelone.c				\
-	ft_lstclear.c				\
-	ft_lstiter.c				\
-	ft_lstmap.c					\
-	ft_lstnew_front.c			\
-	ft_lstnew_back.c
+CFILES =							\
+	./src/chr/ft_isalnum.c			\
+	./src/chr/ft_isalpha.c			\
+	./src/chr/ft_isascii.c			\
+	./src/chr/ft_isdigit.c			\
+	./src/chr/ft_isprint.c			\
+	./src/chr/ft_tolower.c			\
+	./src/chr/ft_toupper.c			\
+									\
+	./src/io/ft_putchar_fd.c		\
+	./src/io/ft_putendl_fd.c		\
+	./src/io/ft_puthexnbr_fd.c		\
+	./src/io/ft_putnbr_fd.c			\
+	./src/io/ft_putstr_fd.c			\
+	./src/io/ft_putunbr_fd.c		\
+									\
+	./src/lst/ft_lstadd_back.c		\
+	./src/lst/ft_lstadd_front.c		\
+	./src/lst/ft_lstclear.c			\
+	./src/lst/ft_lstdelone.c		\
+	./src/lst/ft_lstiter.c			\
+	./src/lst/ft_lstlast.c			\
+	./src/lst/ft_lstmap.c			\
+	./src/lst/ft_lstnew_front.c		\
+	./src/lst/ft_lstnew_back.c		\
+	./src/lst/ft_lstnew.c			\
+	./src/lst/ft_lstsize.c			\
+									\
+	./src/mem/ft_bzero.c			\
+	./src/mem/ft_calloc.c			\
+	./src/mem/ft_memchr.c			\
+	./src/mem/ft_memcmp.c			\
+	./src/mem/ft_memcpy.c			\
+	./src/mem/ft_memmove.c			\
+	./src/mem/ft_memset.c			\
+									\
+	./src/num/ft_atoi.c				\
+	./src/num/ft_itoa.c				\
+	./src/num/ft_itob.c				\
+	./src/num/ft_itoh.c				\
+	./src/str/ft_split.c			\
+	./src/str/ft_strchr.c			\
+	./src/str/ft_strdup.c			\
+	./src/str/ft_striteri.c			\
+	./src/str/ft_strjoin.c			\
+	./src/str/ft_strlcat.c			\
+	./src/str/ft_strlcpy.c			\
+	./src/str/ft_strlen.c			\
+	./src/str/ft_strmapi.c			\
+	./src/str/ft_strncmp.c			\
+	./src/str/ft_strnstr.c			\
+	./src/str/ft_strrchr.c			\
+	./src/str/ft_strtrim.c			\
+	./src/str/ft_substr.c
 
+INCLUDES = $(addprefix -I, $(sort $(dir $(HEADERFILES))))
 OBJFILES = $(addprefix $(OBJDIR)/,$(CFILES:c=o))
 
 clear_line = \e[K
@@ -82,7 +95,7 @@ $(NAME): $(OBJFILES)
 
 obj/%.o: %.c $(HEADERFILES)
 	@mkdir -p $(dir $@)
-	@$(call prettycomp,$(CC) -c $(NORMFLAGS) -o $@ $<)
+	@$(call prettycomp,$(CC) -c $(NORMFLAGS) $(INCLUDES) -o $@ $<)
 
 clean:
 	rm -rf $(OBJDIR)

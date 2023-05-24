@@ -6,12 +6,12 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 12:27:22 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/26 17:27:50 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/05/24 15:40:06 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdbool.h>
+#include <stdlib.h>
 
 static char	*ft_nstrchr(const char *s, int c)
 {

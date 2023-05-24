@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   libft.h                                            :+:    :+:            */
+/*   ft_lstdelone.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/05 14:46:58 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/05/24 15:41:15 by rhorbach      ########   odam.nl         */
+/*   Created: 2022/10/31 14:18:36 by rhorbach      #+#    #+#                 */
+/*   Updated: 2023/05/24 15:39:31 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
+#include <stdlib.h>
 
-# include "./src/chr/chr.h"
-# include "./src/io/io.h"
-# include "./src/lst/lst.h"
-# include "./src/mem/mem.h"
-# include "./src/num/num.h"
-# include "./src/str/str.h"
-
-#endif
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	if (del != NULL)
+		(*del)(lst->content);
+	free(lst);
+}

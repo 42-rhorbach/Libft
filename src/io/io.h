@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strdup.c                                        :+:    :+:            */
+/*   io.h                                               :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/16 12:56:06 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/11/11 13:02:11 by rhorbach      ########   odam.nl         */
+/*   Created: 2023/05/24 15:32:20 by rhorbach      #+#    #+#                 */
+/*   Updated: 2023/05/24 15:35:16 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef IO_H
+# define IO_H
 
-char	*ft_strdup(const char *str)
-{
-	char	*ptr;
-	size_t	count;
+# include <unistd.h>
+# include <stdbool.h>
 
-	count = (ft_strlen(str) + 1);
-	ptr = malloc(count * sizeof(char));
-	if (ptr != NULL)
-		ft_strlcpy(ptr, str, count);
-	return (ptr);
-}
+ssize_t	ft_putchar_fd(char c, int fd);
+ssize_t	ft_putendl_fd(char *s, int fd);
+ssize_t	ft_puthexnbr_fd(unsigned long n, bool caps, int fd);
+ssize_t	ft_putnbr_fd(int n, int fd);
+ssize_t	ft_putstr_fd(char *s, int fd);
+ssize_t	ft_putunbr_fd(unsigned int n, int fd);
+
+#endif

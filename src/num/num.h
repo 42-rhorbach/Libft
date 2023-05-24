@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstdelone_bonus.c                               :+:    :+:            */
+/*   num.h                                              :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/31 14:18:36 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/11/01 13:13:24 by rhorbach      ########   odam.nl         */
+/*   Created: 2023/05/24 15:33:15 by rhorbach      #+#    #+#                 */
+/*   Updated: 2023/05/24 15:33:19 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef NUM_H
+# define NUM_H
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
-{
-	if (del != NULL)
-		(*del)(lst->content);
-	free(lst);
-}
+int		ft_atoi(const char *str);
+char	*ft_itoa(int n);
+char	*ft_itob(int n);
+char	*ft_itoh(int n);
+
+#endif
