@@ -6,12 +6,13 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 15:37:54 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/11/11 12:45:21 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/05/25 12:49:43 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <limits.h>
+#include <stdint.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
