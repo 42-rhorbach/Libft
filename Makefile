@@ -6,7 +6,7 @@
 #    By: rhorbach <rhorbach@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 12:49:02 by rhorbach      #+#    #+#                  #
-#    Updated: 2023/05/24 15:41:55 by rhorbach      ########   odam.nl          #
+#    Updated: 2023/05/30 12:47:33 by rhorbach      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,8 @@ CFILES =							\
 	./src/num/ft_itoa.c				\
 	./src/num/ft_itob.c				\
 	./src/num/ft_itoh.c				\
+	./src/num/ft_satoi.c			\
+									\
 	./src/str/ft_split.c			\
 	./src/str/ft_strchr.c			\
 	./src/str/ft_strdup.c			\
