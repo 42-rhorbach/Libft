@@ -42,6 +42,8 @@ CFILES =							\
 	./src/io/ft_putstr_fd.c			\
 	./src/io/ft_putunbr_fd.c		\
 									\
+	./src/lst/ft_lst_to_array_rev.c	\
+	./src/lst/ft_lst_to_array.c		\
 	./src/lst/ft_lstadd_back.c		\
 	./src/lst/ft_lstadd_front.c		\
 	./src/lst/ft_lstclear.c			\
