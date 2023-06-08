@@ -6,7 +6,7 @@
 #    By: rhorbach <rhorbach@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 12:49:02 by rhorbach      #+#    #+#                  #
-#    Updated: 2023/05/30 12:47:33 by rhorbach      ########   odam.nl          #
+#    Updated: 2023/06/08 16:14:14 by rhorbach      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,11 +58,13 @@ CFILES =							\
 									\
 	./src/mem/ft_bzero.c			\
 	./src/mem/ft_calloc.c			\
+	./src/mem/ft_free_ptr_array.c	\
 	./src/mem/ft_memchr.c			\
 	./src/mem/ft_memcmp.c			\
 	./src/mem/ft_memcpy.c			\
 	./src/mem/ft_memmove.c			\
 	./src/mem/ft_memset.c			\
+	./src/mem/ft_ptr_array_length.c	\
 									\
 	./src/num/ft_atoi.c				\
 	./src/num/ft_itoa.c				\
