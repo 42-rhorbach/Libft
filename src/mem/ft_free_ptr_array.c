@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_free_2d_array.c                                 :+:    :+:            */
+/*   ft_free_ptr_array.c                                :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/06/07 15:43:47 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/06/07 15:53:02 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/06/13 17:57:27 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ void	ft_free_ptr_array(void **array)
 		free(array[i]);
 		i++;
 	}
+	free(array);
 }
