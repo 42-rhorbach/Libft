@@ -6,28 +6,11 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/25 17:28:55 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/05/24 15:14:13 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/06/14 18:02:17 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_int.h"
-
-static char	*clear(char *line)
-{
-	free(line);
-	return (NULL);
-}
-
-static char	*empty_string(void)
-{
-	char	*str;
-
-	str = malloc(1 * sizeof(char));
-	if (str == NULL)
-		return (NULL);
-	str[0] = '\0';
-	return (str);
-}
 
 static char	*append_buffer(char **line_ptr, char *buffer, int buffer_len)
 {
@@ -68,7 +51,14 @@ static t_nl_found	pass_new_line(char *temp, char **line_ptr,
 	return (NL_NOT_FOUND);
 }
 
-char	*get_next_line(int fd)
+/**
+ * @param fd file descriptor to read from
+ * @param line_dst address that will receive output line
+ * @return GNL_CONTINUE when line was found,
+ * GNL_EOF when EOF was found (no line),
+ * GNL_ERROR on error
+*/
+t_gnl	get_next_line(int fd, char **line_dst)
 {
 	static char	temp[BUFFER_SIZE];
 	char		buffer[BUFFER_SIZE];
@@ -78,21 +68,21 @@ char	*get_next_line(int fd)
 
 	line = empty_string();
 	if (line == NULL)
-		return (NULL);
+		return (GNL_ERROR);
 	buffer_bytes = ft_strlen(temp);
 	ft_memmove(buffer, temp, buffer_bytes);
 	while (buffer_bytes != -1)
 	{
 		nl_found = pass_new_line(temp, &line, buffer, buffer_bytes);
 		if (nl_found == ERROR)
-			return (clear(line));
+			return (clear(line, GNL_ERROR));
 		if (nl_found == NL_FOUND)
-			return (line);
+			return (return_line(line, line_dst));
 		buffer_bytes = read(fd, buffer, BUFFER_SIZE);
 		if (buffer_bytes == 0 && line[0] == '\0')
-			return (clear(line));
+			return (clear(line, GNL_EOF));
 		if (buffer_bytes == 0)
-			return (line);
+			return (return_line(line, line_dst));
 	}
-	return (clear(line));
+	return (clear(line, GNL_ERROR));
 }

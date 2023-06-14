@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   get_next_line.h                                    :+:    :+:            */
+/*   utils.c                                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/01/25 17:28:57 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/06/14 18:00:36 by rhorbach      ########   odam.nl         */
+/*   Created: 2023/06/14 18:02:20 by rhorbach      #+#    #+#                 */
+/*   Updated: 2023/06/14 18:04:27 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "get_next_line_int.h"
 
-typedef enum e_gnl {
-	GNL_ERROR,
-	GNL_EOF,
-	GNL_CONTINUE
-}	t_gnl;
+t_gnl	clear(char *line, t_gnl return_value)
+{
+	free(line);
+	return (return_value);
+}
 
-t_gnl	get_next_line(int fd, char **line_dst);
+t_gnl	return_line(char *line, char **line_dst)
+{
+	*line_dst = line;
+	return (GNL_CONTINUE);
+}
 
-#endif
+char	*empty_string(void)
+{
+	char	*str;
+
+	str = malloc(1 * sizeof(char));
+	if (str == NULL)
+		return (NULL);
+	str[0] = '\0';
+	return (str);
+}

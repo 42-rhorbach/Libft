@@ -6,7 +6,7 @@
 #    By: rhorbach <rhorbach@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 12:49:02 by rhorbach      #+#    #+#                  #
-#    Updated: 2023/06/08 16:14:14 by rhorbach      ########   odam.nl          #
+#    Updated: 2023/06/14 18:03:49 by rhorbach      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ CFILES =							\
 	./src/chr/ft_toupper.c			\
 									\
 	./src/gnl/get_next_line.c		\
+	./src/gnl/utils.c				\
 									\
 	./src/io/ft_putchar_fd.c		\
 	./src/io/ft_putendl_fd.c		\

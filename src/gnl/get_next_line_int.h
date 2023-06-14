@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/25 17:28:57 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/05/24 15:15:51 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/06/14 18:03:15 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,9 @@ typedef enum e_nl_found {
 	NL_NOT_FOUND,
 	NL_FOUND
 }	t_nl_found;
+
+t_gnl	clear(char *line, t_gnl return_value);
+t_gnl	return_line(char *line, char **line_dst);
+char	*empty_string(void);
 
 #endif
