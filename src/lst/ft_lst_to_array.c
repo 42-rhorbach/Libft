@@ -6,13 +6,18 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/06/07 15:21:18 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/06/07 15:29:15 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 17:20:24 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
+/**
+ * Converts a list to an array
+ * @param lst List to be converted
+ * @returns A NULL-terminated array, or NULL on error
+ */
 void	**ft_lst_to_array(t_list *lst)
 {
 	void	**array;

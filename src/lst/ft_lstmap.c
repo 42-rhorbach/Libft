@@ -1,17 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstmap_bonus.c                                  :+:    :+:            */
+/*   ft_lstmap.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/01 13:28:07 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/11/01 16:45:25 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 15:03:36 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Duplicates a list and transforms its content using f
+ * @param lst List to be duplicated
+ * @param f The function that is called to transform each node's content
+ * @param del The function that is called to clear each node's content,
+ * may be NULL
+ * @returns The new transformed list, NULL on error
+ */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*newnode;

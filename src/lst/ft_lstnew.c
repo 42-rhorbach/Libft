@@ -6,13 +6,18 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/27 12:23:20 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/05/24 15:39:45 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 15:09:55 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
+/**
+ * Creates a new list node
+ * @param content Content of the list node
+ * @returns The new list node, NULL on error
+ */
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_list;
