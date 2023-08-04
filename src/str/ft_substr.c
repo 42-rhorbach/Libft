@@ -6,14 +6,21 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/16 15:07:07 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/26 17:21:55 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 18:09:17 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+/**
+ * Creates a substring
+ * @param s The original string
+ * @param start The index where the substring starts
+ * @param len The maximum length of the substring
+ * @returns The new substring, NULL on error
+ */
+char	*ft_substr(char const *s, size_t start, size_t len)
 {
 	char	*str;
 	char	*ptr;

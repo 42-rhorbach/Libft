@@ -6,12 +6,20 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 13:05:58 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/11/01 12:56:22 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 18:06:11 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
+/**
+ * Searches for the first occurence of a string in another string
+ * @param haystack The string to search through
+ * @param needle The string to search for
+ * @param len The number of characters in haystack to consider
+ * @returns A pointer to the first occurrence of needle in haystack,
+ * NULL if not found
+ */
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;

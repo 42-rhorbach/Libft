@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/24 15:33:26 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/05/24 15:33:33 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/01 13:04:55 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_substr(char const *s, size_t start, size_t len);
 
 #endif

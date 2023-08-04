@@ -6,13 +6,19 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 15:27:36 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/11/11 13:05:17 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 18:07:29 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
+/**
+ * Trims a string
+ * @param s1 The string to trim
+ * @param set A string containing the characters to trim
+ * @returns A new trimmed string, NULL on error
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;

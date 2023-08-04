@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 12:27:22 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/05/24 15:40:06 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 17:49:08 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,12 @@ static char	**ft_fill_arr(char const *s, char c, char **arr)
 	return (arr);
 }
 
+/**
+ * Splits a string into an array of strings seperated by c
+ * @param s The string to split
+ * @param c The seperating character
+ * @returns An array of strings, NULL on error
+ */
 char	**ft_split(char const *s, char c)
 {
 	unsigned long	i;

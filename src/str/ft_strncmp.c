@@ -6,12 +6,20 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 16:42:21 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/11/11 13:04:39 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 18:02:50 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
+/**
+ * Compares two strings
+ * @param s1 The first string
+ * @param s2 The second string
+ * @param n The maximum number of characters to compare
+ * @returns The difference between the first divergent characters (s1 - s2),
+ * 0 if all n bytes are the same
+ */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t			i;

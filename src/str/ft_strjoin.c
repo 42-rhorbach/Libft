@@ -6,13 +6,19 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 13:12:40 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/26 17:14:20 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 17:54:10 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
+/**
+ * Joins two strings
+ * @param s1 The left string
+ * @param s2 The right string
+ * @returns A new string, NULL on error
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str1;

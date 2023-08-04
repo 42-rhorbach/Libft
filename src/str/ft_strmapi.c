@@ -6,13 +6,20 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/24 13:50:28 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/10/26 17:14:37 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 18:01:26 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
+/**
+ * Duplicates a string and transforms its content using f
+ * @param s String to be duplicated
+ * @param f The function that is called to transform each character,
+ * receiving its index and the character itself
+ * @returns The new transformed string, NULL on error
+ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
