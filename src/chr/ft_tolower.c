@@ -6,10 +6,15 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 11:12:27 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/11/11 13:05:50 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 14:33:43 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * Turns char to lowercase
+ * @param arg Char to be turned into lowercase
+ * @returns New character that is lowercase
+ */
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
