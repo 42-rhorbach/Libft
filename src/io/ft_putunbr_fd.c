@@ -6,12 +6,18 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/23 13:47:39 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/01/23 13:47:54 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 14:45:28 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Writes a unsigned decimal number to a filedescriptor
+ * @param n Number to write
+ * @param fd Filedescriptor to write to
+ * @returns Number of bytes written, -1 on error
+ */
 ssize_t	ft_putunbr_fd(unsigned int n, int fd)
 {
 	ssize_t	count;

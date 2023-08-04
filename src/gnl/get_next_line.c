@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/25 17:28:55 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/06/14 18:02:17 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 14:35:30 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ static t_nl_found	pass_new_line(char *temp, char **line_ptr,
 }
 
 /**
+ * Gets the next line from the file pointed to by fd
  * @param fd file descriptor to read from
  * @param line_dst address that will receive output line
  * @return GNL_CONTINUE when line was found,
