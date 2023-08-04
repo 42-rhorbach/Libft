@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 12:37:15 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/11/11 12:53:16 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 17:43:23 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ static int	ft_intlen(int n)
 	return (counter);
 }
 
+/**
+ * Converts an int to a string
+ * @param n The number to be converted
+ * @returns The converted string, NULL on error
+ */
 char	*ft_itoa(int n)
 {
 	char	*ptr;

@@ -6,18 +6,18 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 12:02:40 by rhorbach      #+#    #+#                 */
-/*   Updated: 2022/11/11 12:44:11 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 17:42:23 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static int	ft_isspace(int c)
-{
-	return (c == ' ' || (c >= '\t' && c <= '\r'));
-}
-
+/**
+ * Converts a string to an int
+ * @param str The string to be converted
+ * @returns The int value of the string
+ */
 int	ft_atoi(const char *str)
 {
 	int	i;

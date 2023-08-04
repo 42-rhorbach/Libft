@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/25 14:19:17 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/01/25 14:19:18 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 17:43:55 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ static int	ft_intlen(int n)
 	return (counter);
 }
 
+/**
+ * Converts an int to a string, represented as binary
+ * @param n The number to be converted
+ * @returns The converted string, NULL on error
+ */
 char	*ft_itob(int n)
 {
 	char	*ptr;

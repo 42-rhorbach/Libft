@@ -6,13 +6,19 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/30 12:44:37 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/05/30 12:45:57 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/08/03 17:46:54 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdbool.h>
 
+/**
+ * Converts a string to an int, very strictly
+ * @param str The string to be converted
+ * @param result_ptr A pointer to store the resulting int in
+ * @returns A boolean indicating whether the conversion was succesfull
+ */
 bool	ft_satoi(const char *str, int *result_ptr)
 {
 	int		i;
