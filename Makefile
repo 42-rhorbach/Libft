@@ -6,7 +6,7 @@
 #    By: rhorbach <rhorbach@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 12:49:02 by rhorbach      #+#    #+#                  #
-#    Updated: 2023/06/14 18:03:49 by rhorbach      ########   odam.nl          #
+#    Updated: 2023/07/28 17:10:30 by rhorbach      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ CFILES =							\
 	./src/chr/ft_isascii.c			\
 	./src/chr/ft_isdigit.c			\
 	./src/chr/ft_isprint.c			\
+	./src/chr/ft_isspace.c			\
 	./src/chr/ft_tolower.c			\
 	./src/chr/ft_toupper.c			\
 									\
