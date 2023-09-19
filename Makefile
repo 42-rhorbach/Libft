@@ -6,7 +6,7 @@
 #    By: rhorbach <rhorbach@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/14 12:49:02 by rhorbach      #+#    #+#                  #
-#    Updated: 2023/09/04 18:16:04 by rhorbach      ########   odam.nl          #
+#    Updated: 2023/09/19 17:01:25 by rhorbach      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ HEADERFILES = \
 	./src/num/num.h					\
 	./src/str/str.h
 
-NORMFLAGS = -Wall -Wextra -Werror $(if $(DEBUG),-g -fsanitize=address)
+NORMFLAGS = -Wall -Wextra -Werror $(if $(DEBUG),-g)
+# -fsanitize=address)
 OBJDIR = obj
 CFILES =							\
 	./src/chr/ft_isalnum.c			\
@@ -44,6 +45,7 @@ CFILES =							\
 	./src/io/ft_putstr_fd.c			\
 	./src/io/ft_putunbr_fd.c		\
 									\
+	./src/lst/ft_lst_dispose_one.c	\
 	./src/lst/ft_lst_to_array_rev.c	\
 	./src/lst/ft_lst_to_array.c		\
 	./src/lst/ft_lstadd_back.c		\

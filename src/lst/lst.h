@@ -6,7 +6,7 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/05/24 15:32:40 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/06/07 15:23:42 by rhorbach      ########   odam.nl         */
+/*   Updated: 2023/09/19 17:01:07 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+void	ft_lst_dispose_one(t_list **lst, void (*del)(void *));
 void	**ft_lst_to_array_rev(t_list *lst);
 void	**ft_lst_to_array(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
