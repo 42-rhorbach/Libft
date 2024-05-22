@@ -6,14 +6,15 @@
 /*   By: rhorbach <rhorbach@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/25 17:28:57 by rhorbach      #+#    #+#                 */
-/*   Updated: 2023/06/14 18:00:36 by rhorbach      ########   odam.nl         */
+/*   Updated: 2024/05/22 14:19:48 by rhorbach      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-typedef enum e_gnl {
+typedef enum e_gnl
+{
 	GNL_ERROR,
 	GNL_EOF,
 	GNL_CONTINUE
